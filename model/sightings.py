@@ -1,0 +1,22 @@
+import datetime
+import dataclasses
+
+@dataclasses.dataclass
+class Sighting:
+    id: int
+    s_datetime: datetime.datetime
+    city: str
+    state: str
+    country: str
+    shape: str
+    duration: int
+    duration_hm: str
+    comments:str
+    date_posted: datetime.datetime
+    latitude: float
+    longitude: float
+
+    def __str__(self):
+        return f"{self.id}"
+    def __hash__(self):
+        return hash(self.id)
